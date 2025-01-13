@@ -26,7 +26,8 @@ function Hero() {
         <div className="mt-10 lg:mt-0">
           <img
             className="rounded-lg shadow-xl"
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            // src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+               src="https://media.istockphoto.com/id/1398349731/photo/served-amala-with-assorted-meat.jpg?s=1024x1024&w=is&k=20&c=m9HSG0u_JMKbpwhlFSwfhHbbm1JCKSp-8fiLDMvWsEE="
             alt="Delicious food spread"
           />
         </div>
