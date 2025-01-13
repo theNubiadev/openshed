@@ -1,9 +1,8 @@
 import {StarIcon} from 'lucide-react';
 
 function Testimonials() {
-    
+
     const testimonials = [
-       
         {   name: "Opeyemi Famakin",
             role: "Food Critic",
             image: "https://images.app.goo.gl/zDLpFYnxcvPufwvp8",
@@ -31,7 +30,7 @@ function Testimonials() {
 
                 <div className=' mt-16 grid grid-cols-1 gap-8 md:grid-cols-3'> 
                     {testimonials.map ((testimony ,index) => (
-                        <div className='bg-gray-50 rounded-lg p-6  shadow-sm '>
+                        <div className='bg-gray-50 rounded-lg p-6  shadow-sm ' key={index}>
                             <div className='flex items-center'>
                                 <img src={testimony.image}
                                      alt={testimony.name} 
@@ -49,7 +48,7 @@ function Testimonials() {
                   <StarIcon key={i} size={16} fill="currentColor" />
                 ))}
               </div>
-              <p className="mt-4 text-gray-600">{testimonial.text}</p>
+              <p className="mt-4 text-gray-600">{testimony.review}</p>
             </div>
 
                     ))}
