@@ -31,7 +31,7 @@ function About() {
             How It Works
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            Simple steps to get your favorite food delivered
+            Simple steps to get your favorite food delivered to your home
           </p>
         </div>
         <div className='mt-16'>
