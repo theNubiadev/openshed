@@ -46,15 +46,15 @@ function Resturant() {
 <div className='max-w-7xl mx-auto p-4 sm:p-6 lg:p-8'> 
     <div className='text-center mb-6'> 
         <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl   '>Featured Resturants </h2>
-        <p className='mt-4 text-lg text-gray-500'> Check out our array of top rated resturants </p>
+        <p className='mt-2 text-lg text-gray-500'> Check out our array of top rated resturants </p>
     </div>
 
     {/* <div className="mt-16">  */}
         <div className="grid  gap-6 md:grid-cols-3">
             {resturants.map(( store,index ) => (
-                <div key={index} className='bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md p-6'> 
+                <div key={index} className='bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md  p-4'> 
                 <img  src={store.image} alt={store.name}
-                    className='w-full h-48 object-cover'
+                    className='w-full h-48 object-cover rounded-lg'
                 />
 
                 <h2 className='text-xl font-semibold mb-2'>{store.name} </h2>
