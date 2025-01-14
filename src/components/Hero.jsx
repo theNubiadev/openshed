@@ -1,4 +1,4 @@
-import React from 'react'
+import { SoupIcon } from "lucide-react"
 
 function Hero() {
   return (
@@ -7,18 +7,18 @@ function Hero() {
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span className="block">Delicious food</span>
+            <span className="block">Delicious food </span>
             <span className="block text-orange-600">delivered to you</span>
           </h1>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
             Order from your favorite restaurants, discover new places, and get
             your food delivered fast and fresh.
           </p>
-          <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div className="mt-8 sm:flex  sm:justify-center lg:justify-start">
             <button className="rounded-md shadow px-8 py-3 bg-orange-600 text-white font-medium hover:bg-orange-700">
               Order Now
             </button>
-            <button className="mt-3 sm:mt-0 sm:ml-3 rounded-md px-8 py-3 bg-gray-100 text-gray-900 font-medium hover:bg-gray-200">
+            <button className="mt-3  ml-2 sm:mt-0 sm:ml-3 rounded-md px-8 py-3 bg-gray-100 text-gray-900 font-medium hover:bg-gray-200">
               Browse Restaurants
             </button>
           </div>
