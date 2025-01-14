@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {SearchIcon, ClockIcon , CalendarIcon, StarIcon} from 'lucide-react'
 function About() {
     const features = [
