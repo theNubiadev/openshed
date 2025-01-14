@@ -42,10 +42,11 @@ function Resturant() {
     ];
 
   return (
-    <div className='bg-gray-50 py-16' >
+    <div className='bg-gray-50 ' >
 <div className='max-w-7xl mx-auto p-4 sm:p-6 lg:p-8'> 
-    <div className='text-center'> 
+    <div className='text-center mb-6'> 
         <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl   '>Featured Resturants </h2>
+        <p className='mt-4 text-lg text-gray-500'> Check out our array of top rated resturants </p>
     </div>
 
     {/* <div className="mt-16">  */}
