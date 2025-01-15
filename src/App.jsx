@@ -6,9 +6,7 @@ import Resturant from './pages/Resturant'
 function App() {
   return (
     <div className='min-h-screen bg-white'>
-
       <Navbar />
-
       <Routes >
         <Route path='/' element={<Home />} />
         <Route path='/resturant' element={<Resturant />} />
