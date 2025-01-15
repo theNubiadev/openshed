@@ -1,11 +1,9 @@
 import { useState } from "react"
 import SearchBar from "../components/SearchBar"
-
+import ResturantCard from '../components/ResturantCard';
 
 function Resturant() {
-    const [searchItem, setSearchItem] = useState('')
-
-    const featuredResturant = [
+    const restaurants = [
         {
             id: 1,
             name: "The Rustic Table",
@@ -51,22 +49,22 @@ function Resturant() {
         },
         {
             id: 2,
-            name: "The Rustic Table",
+            name: "Yellow Corner",
             image:
                 "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-            cuisine: "Contemporary American",
+            cuisine: "Causual Dining",
             rating: 4.5,
-            address: "123 Main St, City",
-            phone: "(555) 123-4567",
+            address: "4 Iwo road Ibadan",
+            phone: "+234 8052148610",
             openingHours: "11:00 AM - 10:00 PM",
             menu: [
                 {
                     category: "Starters",
                     items: [
                         {
-                            name: "Artisan Bread Basket",
+                            name: " ",
                             price: "$8",
-                            description: "Freshly baked selection of artisan breads",
+                            description: " ",
                         },
                         {
                             name: "Soup of the Day",
@@ -95,11 +93,12 @@ function Resturant() {
     ];
 
     const [selectedResturant, setSelectedResturant] = useState(null);
-    const filteredResturants = resturant.filter(
-        (resturant) =>
-            resturant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            resturant.cuisine.toLowerCase().includes(searchTerm.toLowerCase()),
-    );
+    const [searchItem, setSearchItem] = useState("");
+    const filteredRestaurants = restaurants.filter(
+        (restaurant) =>
+          restaurant.name.toLowerCase().includes(searchItem.toLowerCase()) ||
+          restaurant.cuisine.toLowerCase().includes(searchItem.toLowerCase()),
+      );
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-8 ">
@@ -111,8 +110,20 @@ function Resturant() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-
+                    {filteredRestaurants.map((resturant) => (
+                        <ResturantCard
+                            key={resturant.id}
+                            restaurant={resturant}
+                            onClick={() => setSelectedResturant(resturant)}
+                        />
+                    ))}
                 </div>
+                    {
+                        selectedResturant && (
+                            
+                        )
+                    }
+
             </div>
 
         </div>
