@@ -1,8 +1,8 @@
-import { SoupIcon } from "lucide-react"
-
+// import { SoupIcon } from "lucide-react"
+import {motion } from "motion/react"
 function Hero() {
   return (
-    <div className="relative bg-white pt-16">
+    <motion.div className="relative bg-white pt-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:text-left">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
@@ -33,7 +33,7 @@ function Hero() {
         </div>
       </div>
     </div>
-  </div>
+  </motion.div>
   )
 }
 
