@@ -1,7 +1,11 @@
 import { useState } from "react"
-import { SearchIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react";
+
+
 function SearchBar() {
-    const [value, OnChange] = useState('')
+
+    const [value, OnChange] = useState('');
+    
   return (
     <div className="relative w-full max-w-md">
         <input 

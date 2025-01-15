@@ -18,9 +18,9 @@ function RestaurantCard({ restaurant, onClick }) {
                     <MapIcon className="w-4 h-4 mr-1" />
                     <span>{restaurant.address}</span>
                 </div>
-                <div className="flex items-center mt-2">
+                <div className="flex items-center mt-2  text-sm text-gray-500">
                     <Clock10Icon className="w-4 h-4 mr-1" />
-                    <span>{restaurant.time}</span>
+                    <span>{restaurant.openingHours}</span>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@ RestaurantCard.propTypes = {
         image: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         address: PropTypes.string.isRequired,
-        time: PropTypes.string.isRequired,
+        openingHours: PropTypes.string.isRequired,
     }).isRequired,
     onClick: PropTypes.func,
 };

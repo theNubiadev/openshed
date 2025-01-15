@@ -118,11 +118,11 @@ function Resturant() {
                         />
                     ))}
                 </div>
-                    {
+                    {/* {
                         selectedResturant && (
-                            
+
                         )
-                    }
+                    } */}
 
             </div>
 
