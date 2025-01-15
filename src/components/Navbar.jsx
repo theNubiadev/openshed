@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { MenuIcon } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
+
 function Navbar() {
-
-  const [openMenu, setOpenMenu] = useState();
-
+  const [openMenu, setOpenMenu] = useState('false');
 
   return (
     <div>
