@@ -2,7 +2,7 @@
 function Meals() {
     const meals = [
         {
-            name: "Original Fried Rice",
+            name: "Original Jollof Rice",
             description: "Classical, original & rich naija fried rice,. Search with choice of protein and sides.",
             image: "https://media.istockphoto.com/id/1127727388/photo/nigerian-jollof-rice-with-chicken-thigh.jpg?s=1024x1024&w=is&k=20&c=5Twu3vXlHUHzuJGyz2uyHMWsL0mRxV2P65FLeIlnl2Y=",
         },
