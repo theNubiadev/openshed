@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { MenuIcon } from 'lucide-react'
-import { Link } from 'react-router-dom';
+import { MenuIcon, XIcon } from 'lucide-react'
+import { Link, NavLink } from 'react-router-dom';
 
 
 function Navbar() {
-  const [openMenu, setOpenMenu] = useState('false');
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div>
@@ -33,20 +33,38 @@ function Navbar() {
             </div>
             <div className="md:hidden">
               <button className="text-gray-600 hover:text-orange-600">
-                <MenuIcon size={24} onClick={openMenu} />
+                <MenuIcon size={24}
+                  onClick={() => setOpenMenu(true)} />
               </button>
             </div>
-
           </div>
 
-          <div className='hidden'> 
-            
-            
-             </div>
-        </div>
+          {/* <div className='absolute top-0 right-0 bottom-0'>
+            <div className="flex flex-col text-gray-600">
+              <button className='flex cursor-pointer items-center gap-4 p-3'
+                onClick={() => setOpenMenu(false)}
+              >
+                <XIcon className='h-6 mt-2 rotate-180' />
+              </button>
 
-      </nav>
-      </div>
+
+              <NavLink to='/'
+                onClick={() setOpenMenu(false)}>
+              Home
+            </NavLink>
+
+            <NavLink
+              to='/resturant'
+              onClick={() setOpenMenu(false)} >
+            Resturants
+          </NavLink>
+        </div> */}
+
+    {/* </div> */}
+        </div >
+
+      </nav >
+    </div >
   )
 }
 

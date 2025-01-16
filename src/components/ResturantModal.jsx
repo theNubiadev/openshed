@@ -35,5 +35,5 @@ function ResturantModal({ resturant, onClose }) {
   )
 }
 
-ResturantModal.P
+// ResturantModal.P
 export default ResturantModal
