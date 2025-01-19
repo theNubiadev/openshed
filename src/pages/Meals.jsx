@@ -1,10 +1,12 @@
+import { ArrowBigLeftIcon } from "lucide-react";
+import {  } from "motion/react-client";
+import { useState } from "react";
 
-
-const resturants: Resturant[] = [
+const resturants = [
   {
     id: 1,
     name: "Green Corner",
-    image: "",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     rating: 4.5,
     deliveryTime: "25-40",
     minOrder: 10,
@@ -13,7 +15,7 @@ const resturants: Resturant[] = [
   {
     id: 2,
     name: "Green Corner",
-    image: "",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     rating: 4.5,
     deliveryTime: "25-40",
     minOrder: 10,
@@ -22,7 +24,7 @@ const resturants: Resturant[] = [
   {
     id: 3,
     name: "Item7Go",
-    image: "",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     rating: 4.5,
     deliveryTime: "15-20",
     minOrder: 10,
@@ -30,7 +32,7 @@ const resturants: Resturant[] = [
   }
 ];
 
-const foodItems: FoodItem[] = [
+const foodItems = [
   {
     id: 1,
     resturantId: 1,
@@ -140,9 +142,60 @@ const foodItems: FoodItem[] = [
   },
 ]
 function Meals() {
-  return (
-    <div>Meals</div>
-  )
+
+  const [selectedRestuurant, setSelectedResturant] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
+
+  // const addToCart = (item) => {
+  //   if (cartItems.length > 0 &&
+  //     cartItems[0].resturantId !== item.resturantId
+  //   ) {
+  //     return;
+  //   }
+  //   setCartItems([
+  //     {
+  //       ...item,
+  //       quantity: 1,
+  //     },
+  //   ])
+  // } else {
+    // setCartItems((prev) => {
+    //   const existing = prev.find((i) => i.id === item:id);
+    //   if (existing) {
+    //     return prev.map((i) => i.id === item.id ? {
+    //       ...i,
+    //       quantity: i.quantity + 1,
+    //     }
+    //       : i
+    //     )
+    //   }
+
+//       return [
+//         ...prev,
+//         {
+//           ...item,
+//           quantity: 1,
+//         }
+//       ];
+//     });
+// };
+
+// const removeFromCart = (itemId) => {
+//   setCartItems((prev) => pre.filter((item) => item.id !== itemId));
+// }
+// const cartTotal = cartItems.reduce(
+//   (sum, item) => sum + item.price * item.quantity, 0
+// );
+
+
+return (
+  <div className="max-w-7xl mx-auto px-4 h-16 flex items-center jusify-between">
+    <div className='flex items-center'>
+      <ArrowBigLeftIcon className='w-6 h-6 mr-2' />
+      <h1 className='text-lg font-semibold'>Back</h1>
+    </div>
+  </div>
+)
 }
 
 export default Meals
