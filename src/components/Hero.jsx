@@ -1,4 +1,5 @@
 // import { SoupIcon } from "lucide-react"
+import { Link } from "react-router-dom"
 import {motion } from "motion/react"
 function Hero() {
   return (
@@ -18,9 +19,12 @@ function Hero() {
             <button className="rounded-md shadow px-8 py-3 bg-orange-600 text-white font-medium hover:bg-orange-700">
               Order Now
             </button>
+            <Link to='/resturant'>
+
             <button className="mt-3  ml-2 sm:mt-0 sm:ml-3 rounded-md px-8 py-3 bg-gray-100 text-gray-900 font-medium hover:bg-gray-200">
               Browse Restaurants
             </button>
+          </Link>
           </div>
         </div>
         <div className="mt-10 lg:mt-0">
