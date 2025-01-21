@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { MenuIcon, XIcon, ShoppingCartIcon } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 
+
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false)
@@ -22,8 +23,8 @@ function Navbar() {
               <Link to="/resturant" className="text-gray-600 hover:text-orange-600">
                 Restaurants
               </Link>
-              <Link to="/meals" className="text-gray-600 hover:text-orange-600">
-                Meals
+              <Link to="/store" className="text-gray-600 hover:text-orange-600">
+                Store
               </Link>
               <Link to="" className="text-gray-600 hover:text-orange-600">
                 How it Works
