@@ -23,10 +23,10 @@ function Navbar() {
               <Link to="/resturant" className="text-gray-600 hover:text-orange-600">
                 Restaurants
               </Link>
-              <Link to="/store" className="text-gray-600 hover:text-orange-600">
-                Store
+              <Link to="/meal" className="text-gray-600 hover:text-orange-600">
+                Meals
               </Link>
-              <Link to="" className="text-gray-600 hover:text-orange-600">
+              <Link to="" className="`text-gray-600 hover:text-orange-600">
                 How it Works
               </Link>
               <Link to="" className="text-gray-600 hover:text-orange-600">
