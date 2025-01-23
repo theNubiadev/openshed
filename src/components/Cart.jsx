@@ -1,8 +1,8 @@
-import { MealContext } from "../context/MealContext"
+// import { MealContext } from "../context/MealContext"
 import { XIcon } from "lucide-react";
 
 function Cart({isCartOpen, setIsCartOpen}) {
-    const {cartItems, removeFromCart} = MealContext();
+    // const {cartItems, removeFromCart} = MealContext();
     const cartTotal = cartItems.reduce( (total, item) => total +item.price * quantity, 0);
   return (
     <div>

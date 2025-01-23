@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { MenuIcon, XIcon, ShoppingCartIcon } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
-import Cart from "./Cart";
+// import Cart from "./Cart"; 
 // import { MealContext } from "../context/MealContext.jsx";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
    const [isCartOpen, setIsCartOpen] = useState(false);
-   const { cartItems } = MealContext();
+  //  const { cartItems } = MealContext();
   return (
     <div>
       <nav className="fixed w-full bg-white shadow-sm z-50">
@@ -44,9 +44,9 @@ function Navbar() {
                 <ShoppingCartIcon className="w-6 h-6 text-gray-600 hover:text-orange-600" />
                 <span className="absolute top-0 right-0 bg-orange-600 text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
                   {/* Replace with actual cart count */}
-                  ({cartItems.length})
+                  {/* ({cartItems.length}) */}
                 </span>
-                <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+                {/* <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} /> */}
               </Link>
             )}
             {/* Mobile Menu Icon */}
