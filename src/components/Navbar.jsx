@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { MenuIcon, XIcon, ShoppingCartIcon } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
-
+import Cart from "./Cart";
+// import { MealContext } from "../context/MealContext.jsx";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false)
+   const [isCartOpen, setIsCartOpen] = useState(false);
+   const { cartItems } = MealContext();
   return (
     <div>
       <nav className="fixed w-full bg-white shadow-sm z-50">
@@ -35,27 +37,20 @@ function Navbar() {
               <button className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700">
                 Order Now
               </button>
-              {/* Shopping Cart Icon */}
-              <Link to="/cart">
-                <button
-                // onClick={() => }
-                >
-                  <ShoppingCartIcon className="w-6 h-6 text-gray-600 hover:text-orange-600" />
-                  {
-                    <span className='absolute top-2 right-4 bg-orange-600 text-white rounded-full h-5 w-5 flex items-center justify-center '> { }</span>
-                  }
-                </button>
-              </Link>
             </div>
 
+            {!openMenu && (
+              <Link to="/cart" className="relative justify-end md:justify-end">
+                <ShoppingCartIcon className="w-6 h-6 text-gray-600 hover:text-orange-600" />
+                <span className="absolute top-0 right-0 bg-orange-600 text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
+                  {/* Replace with actual cart count */}
+                  ({cartItems.length})
+                </span>
+                <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+              </Link>
+            )}
             {/* Mobile Menu Icon */}
             <div className="md:hidden flex items-center">
-              <Link to="/cart" className="mr-4">
-                <ShoppingCartIcon className="w-6 h-6 text-gray-600 hover:text-orange-600" />
-                {
-                  <span className='absolute top-1.5 bg-orange-600 text-white rounded-full h-5 w-5 flex items-center justify-center '> { }</span>
-                }
-              </Link>
               <button className="text-gray-600" onClick={() => setOpenMenu(true)}>
                 <MenuIcon size={24} />
               </button>
@@ -112,14 +107,6 @@ function Navbar() {
                 >
                   Contact
                 </NavLink>
-                {/* <Link
-                  to="/cart"
-                  className="flex items-center text-gray-600 hover:text-orange-600"
-                  onClick={() => setOpenMenu(false)}
-                >
-                  <ShoppingCartIcon className="w-6 h-6 mr-2" />
-                  Cart
-                </Link> */}
                 <button
                   className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700"
                   onClick={() => setOpenMenu(false)}
@@ -128,11 +115,6 @@ function Navbar() {
                 </button>
               </div>
             </div>
-            {/* Click outside menu to close */}
-            {/* <div
-              className="fixed inset-0"
-              onClick={() => setOpenMenu(false)}
-            ></div> */}
           </div>
         )}
       </nav>
