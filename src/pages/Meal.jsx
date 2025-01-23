@@ -5,7 +5,7 @@ import { restaurants, foodItems } from '../assets/assets.js'
 // import { MealContext } from "../context/MealContext.jsx";
 function Meal() {
   const [selectedResturant, setSelectedResturant] = useState(null);
-  const { addToCart } = useContext(MealContext)
+  // const { addToCart } = useContext(MealContext)
 
   return (
     <div className='max-w-7xl mx-auto px-8 pt-24 pb-12'>
