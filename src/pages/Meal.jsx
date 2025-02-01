@@ -1,8 +1,7 @@
-import { } from "motion/react-client";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { StarIcon, ClockIcon, ArrowLeftIcon } from "lucide-react";
 import { restaurants, foodItems } from '../assets/assets.js'
-// import { MealContext } from "../context/MealContext.jsx";
+
 function Meal() {
   const [selectedResturant, setSelectedResturant] = useState(null);
   // const { addToCart } = useContext(MealContext)
@@ -88,8 +87,6 @@ function Meal() {
                 </div>
               ))};
           </div>
-
-
         </div>
       )}
     </div>
