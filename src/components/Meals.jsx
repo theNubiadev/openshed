@@ -61,7 +61,7 @@ function Meals() {
                                 <h2 className="text-xl font-semibold mb-2 ">{meal.name}</h2>
                                 <p className="text-sm text-gray-600">{meal.description}</p>
                             </div>
-                            <button className=' text-orange-600 font-medium  mt-2 text-base '>Order Now </button>
+                            {/* <button className=' text-orange-600 font-medium  mt-2 text-base '>Order Now </button> */}
                         </div>
                     ))}
                 </div>
