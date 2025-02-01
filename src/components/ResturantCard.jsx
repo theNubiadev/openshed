@@ -13,7 +13,8 @@ function RestaurantCard({ restaurant, onClick }) {
                 className="w-full h-48 object-cover"
             />
             <div className="p-4">
-                <h2 className="font-semibold text-lg text-orange-600">{restaurant.name}</h2>
+                   
+                    <h2 className="font-semibold text-lg text-orange-600">{restaurant.name}</h2>
                 <div className="flex items-center mt-2 text-sm text-gray-500">
                     <MapIcon className="w-4 h-4 mr-1" />
                     <span>{restaurant.address}</span>
