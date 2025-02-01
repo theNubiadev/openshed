@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-   const [isCartOpen, setIsCartOpen] = useState(false);
+  //  const [isCartOpen, setIsCartOpen] = useState(false);
   //  const { cartItems } = MealContext();
   return (
     <div> 
@@ -61,7 +61,7 @@ function Navbar() {
         {/* Mobile Menu */}
         {openMenu && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
-            <div className="fixed right-0 top-0 w-3/4 max-w-sm h-full bg-white shadow-lg">
+            <div className="fixed right-0 top-0 w-3/4 max-w-sm h-30 bg-white shadow-lg">
               <div className="flex justify-between items-center px-4 py-4">
                 {/* <span className="text-xl font-bold text-orange-600">Openshed</span> */}
                 <button
